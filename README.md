@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# order-status-sms-notifier
-=======
 # 📦 Order Status SMS Notifier (AWS + HTML)
 
 This project sends SMS updates to customers when their order status changes and logs them to DynamoDB.
@@ -11,7 +8,7 @@ This project sends SMS updates to customers when their order status changes and 
 - Amazon SNS (for SMS)
 - DynamoDB (`Amazon` table with `id` as partition key)
 - API Gateway (POST /order/update)
-- S3 Static Hosting (or GitHub Pages for frontend)
+- GitHub Pages (static frontend hosting)
 
 ## 🚀 How It Works
 
@@ -23,16 +20,19 @@ This project sends SMS updates to customers when their order status changes and 
 
 ## 📁 Folder Structure
 
-
 ## ⚙️ To Deploy
 
-### Frontend
+### Frontend (GitHub Pages)
 
-- Upload `frontend/index.html` to:
-  - GitHub Pages, OR
-  - S3 Static Website Hosting (public-read or CloudFront)
+- Upload `index.html` to the root of your GitHub repo
+- Go to `Settings > Pages`
+- Set:
+  - Source: `main`
+  - Folder: `/ (root)`
+- GitHub Pages URL:  
+  👉 https://ravikumarkamani74.github.io/order-status-sms-notifier/
 
-### Backend
+### Backend (AWS Lambda + API Gateway)
 
 1. Deploy `lambda_function.py` to a new AWS Lambda function
 2. Add IAM permissions:
@@ -42,7 +42,7 @@ This project sends SMS updates to customers when their order status changes and 
    - POST method
    - Lambda Proxy Integration
    - Enable CORS (POST and OPTIONS)
-4. Deploy API to a stage (`prod`)
+4. Deploy API to a stage (e.g., `prod`)
 
 ### DynamoDB Table
 
@@ -58,7 +58,3 @@ This project sends SMS updates to customers when their order status changes and 
   "status": "Order Shipped",
   "timestamp": "2025-07-09T06:30:00.000Z"
 }
-
----
-
->>>>>>> 5f950e3 (first commit)
