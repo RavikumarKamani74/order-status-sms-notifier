@@ -18,8 +18,6 @@ This project sends SMS updates to customers when their order status changes and 
    - Sends an SMS via SNS
    - Logs the data into DynamoDB
 
-## 📁 Folder Structure
-
 ## ⚙️ To Deploy
 
 ### Frontend (GitHub Pages)
